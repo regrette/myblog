@@ -1,0 +1,15 @@
+extend ../layout
+
+block content
+    a(href='/posts') LIST
+    a(href='/posts/new') NEW
+
+    contents
+        - each post in posts
+            a(href='/posts/'+post._id)
+                p= post.title
+                p= post.content
+                p= post.date.toDateString()
+
+    a(href='/posts') LIST
+    a(href='/posts/new') NEW

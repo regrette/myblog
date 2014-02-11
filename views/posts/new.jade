@@ -1,0 +1,9 @@
+extend ../layout
+
+block content
+    form(action="/posts/new", method="post")
+        input(type="text", name="title")
+        br
+        textarea(name="content")
+        br
+        input(type="submit", value="save")
